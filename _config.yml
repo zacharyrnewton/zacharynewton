@@ -1,0 +1,15 @@
+title: Zachary Newton
+email: zacharyrnewton@gmail.com
+description: "This is my description"
+baseurl: "/zn"
+url: "https://zacharyrnewton.github.io"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-feed
