@@ -1,12 +1,39 @@
 .hero
   width: 100%
+  height: 100vh
   display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr 1fr
+  padding: 16px
+  box-sizing: border-box
+
 
 .heroVideo
-  width: 50vw
-  height: 50vh
+  grid-column: 2/3
+  grid-row: 1/4
   background:
-    image: url('../assets/img/hero.jpg')
+    image: url('../img/hero.jpg')
     position: center center
     size: cover
     repeat: no-repeat
+  border: 4px 4px 4px 20px solid var(--white)
+
+@media screen and(orientation: portrait)
+  .hero
+    width: 100%
+    height: 100%
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto
+  .heroVideo
+    width: 100%
+    height: 300px
+    grid-column: auto
+    grid-row: auto
+    background:
+      color: var(--primary)
+      image: url('../img/hero.jpg')
+      position: center center
+      size: cover
+      repeat: no-repeat
+    border: none
