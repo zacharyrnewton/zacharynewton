@@ -6,11 +6,9 @@
   display: grid
   grid-template-columns: 1fr
   grid-template-rows: auto
-
 .heroText
   span.typed
     text-decoration: underline solid var(--primary-plus-one)
-
 .heroVideo
   position: relative
   z-index: 1
@@ -56,6 +54,7 @@
     grid-gap: 2rem
     .timelineContainer
       width: 100%
+      max-width: 769px
       padding: 2rem
       box-shadow: 0 6px 16px rgba(54,54,82,0.16)
       box-sizing: border-box
@@ -70,26 +69,57 @@
       p
         margin: 0
         padding: 14px 0
-
-
-
-//@media screen and(orientation: landscape)
+@media screen and (orientation: portrait) and (min-width: 700px)
   .hero
-    width: 100%
+    padding: 48px 64px 16px 64px
+@media screen and(orientation: landscape)
+  .hero
     height: 100vh
+    width: 100vw
+    padding: 0
     display: grid
     grid-template-columns: 1fr 1fr
-    grid-template-rows: 1fr 1fr 1fr
-    padding: 16px
-    box-sizing: border-box
+    overflow: scroll
+    //grid-template-rows: 1fr 1fr 1fr
+    .heroVideo
+      grid-column: 2/3
+      grid-row: 1/4
+      position: 
+      z-index: 1
+      width: 50vw
+      height: 100vh
+      background-color: var(--off-white)
+      border: none
+      border-radius: 0
+      box-shadow: none
+      margin: 0
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+      svg.play
+        position: relative
+        z-index: 2
+        height: 100px
+        width: 100px
+        border-radius: 100%
+        box-shadow: 0 8px 8px rgba(0,0,0,0.16)
+        path
+          fill: var(--white)
+      picture, img, source
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .heroVideo
 
-
-  .heroVideo
-    grid-column: 2/3
-    grid-row: 1/4
-    background:
-      image: url('../img/hero.jpg')
-      position: center center
-      size: cover
-      repeat: no-repeat
-    border: 4px 4px 4px 20px solid var(--white)
+      background:
+        image: url('../img/hero.jpg')
+        position: center center
+        size: cover
+        repeat: no-repeat
+      border: 4px 4px 4px 20px solid var(--white)
