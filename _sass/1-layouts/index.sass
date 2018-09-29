@@ -13,21 +13,29 @@
 
 .heroVideo
   position: relative
+  z-index: 1
   width: 100%
   height: calc(((100vw - 32px) / 16) * 9)
   grid-column: auto
   grid-row: auto
-  background:
-    color: var(--off-white)
-    image: url('../img/hero.jpg')
-    position: center center
-    size: cover
-    repeat: no-repeat
+  background-color: var(--off-white)
   border: none
   border-radius: 6px
   box-shadow: 0 6px 16px rgba(54,54,82,0.16)
-  margin: 24px auto
+  margin: 24px auto 56px auto
   overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  svg.play
+    position: relative
+    z-index: 2
+    height: 100px
+    width: 100px
+    border-radius: 100%
+    box-shadow: 0 8px 8px rgba(0,0,0,0.16)
+    path
+      fill: var(--white)
   picture, img, source
     position: absolute
     top: 0
@@ -37,9 +45,30 @@
     width: 100%
     height: 100%
     object-fit: cover
-
-
-
+.timelineSection
+  box-sizing: border-box
+  h5
+    margin: 0 0 2rem 0
+  .timelineWrapper
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 2rem
+    .timelineContainer
+      width: 100%
+      padding: 2rem
+      box-shadow: 0 6px 16px rgba(54,54,82,0.16)
+      box-sizing: border-box
+      border-radius: 6px
+      h4
+        margin: 0
+        padding: 0 0 2px 0
+      small
+        margin: 0
+        padding: 2px 0
+        color: var(--primary-plus-one)
+      p
+        margin: 0
+        padding: 14px 0
 
 
 
