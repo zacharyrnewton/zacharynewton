@@ -2,16 +2,23 @@
 layout: default
 ---
 <div class="hero">
+
   <div class="heroText">
     <h1>Hey there.</h1>
-    <h2>I’m Zachary. I am a UI Designer</h2>
+    <h2>I’m <b class="highlight">Zachary</b>. I am a <br><span class="typed">UI Designer</span></h2>
   </div>
 
   <div class="heroVideo">
-
+    <picture>
+      <source media="(max-width: 799px)" srcset="{{ site.baseurl }}/assets/img/hero.jpg">
+      <source media="(min-width: 800px)" srcset="{{ site.baseurl }}/assets/img/hero.jpg">
+      <img src="{{ site.baseurl }}/assets/img/hero.jpg" alt="Video Thumbnail">
+    </picture>
+    <i class="fas fa-play-circle"></i>
   </div>
 
   <div class="timeline">
     <h5>Here are some products/projects I’ve worked on</5>
   </div>
+
 </div>
