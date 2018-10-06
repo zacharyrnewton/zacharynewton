@@ -25,4 +25,5 @@ fields:
   config:
     required: true
 pages:
+- _projects/test.md
 - _projects/zachary-newton.md
