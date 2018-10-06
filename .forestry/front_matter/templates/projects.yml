@@ -30,5 +30,3 @@ fields:
   config:
     required: true
   description: Enter a little description for your project/product.
-pages:
-- _posts/test.html
