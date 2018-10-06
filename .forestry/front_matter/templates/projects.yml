@@ -25,4 +25,4 @@ fields:
   config:
     required: true
 pages:
-- _projects/zachary-newton.md
+- _projects/
