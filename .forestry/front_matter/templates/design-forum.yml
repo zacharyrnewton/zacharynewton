@@ -1,7 +1,7 @@
 ---
-label: Design Forum
-hide_body: 
-is_partial: 
+label: Project
+hide_body: true
+is_partial: false
 fields:
 - name: title
   label: Title
