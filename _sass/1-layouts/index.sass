@@ -15,7 +15,7 @@ body
 .heroText
   grid-area: heroText
   span.typed
-    text-decoration: underline solid var(--primary-plus-one)
+    text-decoration: underline var(--primary-plus-one)
 .timelineSection
   grid-area: timelineSection
   box-sizing: border-box
@@ -46,32 +46,46 @@ body
       p
         margin: 0
         padding: 14px 0
-    .timelineDot
-      position: absolute
-      top: 0
-      left: -31px
-      content: ""
-      width: 15px
-      height: 15px
-      height: 100%
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-    .timelineDot::before
-      content: ""
-      width: 15px
-      height: 15px
-      background: var(--cool-white)
-      border-radius: 100%
-    .timelineDot::after
-      content: ""
-      width: 2px
-      height: 100%
-      position: absolute
-      top: calc(50% + 15px)
-      background: var(--cool-white)
-
+      .timelineDotWrapper
+        position: absolute
+        top: 0
+        left: -31px
+        content: ""
+        width: 15px
+        height: 15px
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+      .timelineDot
+        content: ""
+        width: 15px
+        height: 15px
+        background: var(--cool-white)
+        border-radius: 100%
+      .timelineDotWrapper::after
+        content: ""
+        width: 2px
+        height: calc(50% + 2px)
+        position: absolute
+        top: calc(50% + 15px)
+        background: var(--cool-white)
+        border-radius: 2px
+      .timelineDotWrapper::before
+        content: ""
+        width: 2px
+        height: calc(50% + 2px)
+        position: absolute
+        bottom: calc(50% + 15px)
+        background: var(--cool-white)
+        border-radius: 2px
+      &:first-of-type
+        .timelineDotWrapper::before
+          display: none
+      &:last-of-type
+        .timelineDotWrapper::after
+          display: none
 .heroVideo
   position: relative
   grid-area: heroVideo
@@ -95,10 +109,9 @@ body
     height: 100px
     width: 100px
     border-radius: 100%
-    box-shadow: 0 8px 8px rgba(0,0,0,0.16)
     path
       fill: var(--white)
-  picture, img, source
+  img, picture
     position: absolute
     top: 0
     right: 0
@@ -110,6 +123,8 @@ body
 @media screen and (orientation: portrait) and (min-width: 700px)
   .hero
     padding: 48px 64px 16px 64px
+  .heroVideo
+    height: calc(((100vw - 128px) / 16) * 9)
 @media screen and(orientation: landscape) and (min-width: 900px)
   .hero
     height: 100vh
@@ -142,10 +157,9 @@ body
       height: 100px
       width: 100px
       border-radius: 100%
-      box-shadow: 0 8px 8px rgba(0,0,0,0.16)
       path
         fill: var(--white)
-    picture, img, source
+    img, picture
       position: absolute
       background-color: var(--off-white)
       top: 0

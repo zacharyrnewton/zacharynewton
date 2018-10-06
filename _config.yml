@@ -13,3 +13,6 @@ sass:
   style: compressed
 plugins:
   - jekyll-feed
+collections:
+  projects:
+    output: true
