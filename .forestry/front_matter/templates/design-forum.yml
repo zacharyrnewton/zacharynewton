@@ -24,5 +24,3 @@ fields:
   default: ''
   config:
     required: true
-pages:
-- _projects/
