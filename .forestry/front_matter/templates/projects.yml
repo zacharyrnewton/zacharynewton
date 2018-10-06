@@ -1,0 +1,32 @@
+---
+label: Projects
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title of Project
+  description: Give you project/product a name.
+  config:
+    required: true
+  hidden: false
+- type: datetime
+  name: date
+  label: Date
+  description: Enter a rough date for this project/product so we can make sure everything
+    is sorted in a timely manner ;)
+  config:
+    date_format: MM/DD/YYYY
+    required: true
+- type: text
+  name: released
+  label: Released
+  description: When was this project/product released? Early/Mid/Late YYYY
+  config:
+    required: true
+- type: textarea
+  label: Description
+  name: description
+  config:
+    required: true
+  description: Enter a little description for your project/product.
