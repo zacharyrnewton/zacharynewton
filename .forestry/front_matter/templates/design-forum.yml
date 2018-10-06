@@ -8,6 +8,8 @@ fields:
   type: text
   hidden: false
   default: ''
+  config:
+    required: true
 - name: released
   label: Released
   type: text
