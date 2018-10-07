@@ -28,6 +28,7 @@ body
     grid-template-columns: 1fr
     grid-gap: 2rem
     .timelineContainer
+      display: block
       position: relative
       width: 100%
       max-width: 769px
@@ -38,8 +39,9 @@ body
       border-radius: 6px
       cursor: pointer
       transition: all 0.2s ease-out
-      &:visited
-        border: 2px solid var(--primary)
+      text-decoration: none
+      color: var(--cool-black)
+      box-sizing: border-box
       &:hover
         background: var(--primary)
         h4, small, p
