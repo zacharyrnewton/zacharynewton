@@ -36,6 +36,14 @@ body
       box-shadow: 0 6px 16px rgba(54,54,82,0.16)
       box-sizing: border-box
       border-radius: 6px
+      cursor: pointer
+      transition: all 0.2s ease-out
+      &:visited
+        border: 2px solid var(--primary)
+      &:hover
+        background: var(--primary)
+        h4, small, p
+          color: var(--white)
       h4
         margin: 0
         padding: 0 0 2px 0

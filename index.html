@@ -11,13 +11,14 @@ layout: default
   <div class="timelineSection">
     <h5>Here are some products/projects I’ve worked on:</h5>
       <div class="timelineWrapper">
-        {% for project in site.projects reversed %}
-        <div class="timelineContainer">
+        {% for project in site.projects reversed %}{% if page.link %}
+        <a href="{{ project.link }}" target="_blank" class="timelineContainer">{% else %}
+        <a class="timelineContainer">{% endif %}
           <div class="timelineDotWrapper"><div class="timelineDot"></div></div>
           <h4>{{ project.title }}</h4>
           <small>{{ project.released }}</small>
           <p>{{ project.description }}</p>
-        </div>
+        </a>
         {% endfor %}
       </div>
   </div>
