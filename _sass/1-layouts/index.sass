@@ -41,7 +41,11 @@ body
       transition: all 0.2s ease-out
       text-decoration: none
       color: var(--cool-black)
-      box-sizing: border-box
+      box-sizing: content-box
+      &:link
+        background: var(--white)
+      &:visited
+        background: var(--white)
       &:hover
         background: var(--primary)
         h4, small, p
