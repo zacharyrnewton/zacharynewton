@@ -27,7 +27,8 @@ body
     display: grid
     grid-template-columns: 1fr
     grid-gap: 2rem
-    .timelineContainer
+    margin-left: 32px
+    a.timelineContainer
       display: block
       position: relative
       width: 100%
@@ -41,7 +42,6 @@ body
       transition: all 0.2s ease-out
       text-decoration: none
       color: var(--cool-black)
-      box-sizing: content-box
       &:link
         background: var(--white)
       &:visited
@@ -50,6 +50,8 @@ body
         background: var(--primary)
         h4, small, p
           color: var(--white)
+        .timelineDot
+          background: var(--primary-plus-one)
       h4
         margin: 0
         padding: 0 0 2px 0
@@ -73,11 +75,11 @@ body
         justify-content: center
         align-items: center
       .timelineDot
-        content: ""
         width: 15px
         height: 15px
         background: var(--cool-white)
         border-radius: 100%
+        transition: background 0.2s ease-in-out
       .timelineDotWrapper::after
         content: ""
         width: 2px
@@ -117,6 +119,10 @@ body
   display: flex
   justify-content: center
   align-items: center
+  filter: grayscale(.5)
+  transition: filter 0.1s ease-out
+  &:hover
+    filter: grayscale(0)
   svg.play
     position: relative
     z-index: 2
@@ -192,6 +198,8 @@ body
     margin-right: 0
     padding-right: 20px
     box-sizing: border-box
+    .timelineWrapper
+      margin-left: auto
   .heroText
     margin-top: 128px
 @media screen and (orientation: landscape) and (min-width: 1300px)
