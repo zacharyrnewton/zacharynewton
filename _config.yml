@@ -3,8 +3,8 @@ email: zacharyrnewton@gmail.com
 description: "This is my description"
 baseurl: "/zn"
 url: "https://zacharyrnewton.github.io"
-twitter_username: jekyllrb
-github_username:  jekyll
+instagram_link: https://www.instagram.com/zacharyrnewton/
+youtube_link:  https://www.youtube.com/zacharyrnewton
 
 # Build settings
 markdown: kramdown
