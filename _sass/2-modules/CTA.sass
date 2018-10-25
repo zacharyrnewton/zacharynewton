@@ -70,3 +70,23 @@
     a.instagram, a.youtube
       opacity: 1
       transform: scale(1)
+  &.CTAopen
+    &::before
+      content: ""
+      position: absolute
+      width: 100vw
+      height: 100vh
+      right: -32px
+      bottom: -32px
+    .mainCTA
+      a.chat
+        opacity: 0
+        z-index: 101
+        transform: rotate(180deg)
+      a.email
+        opacity: 1
+        z-index: 102
+        transform: rotate(360deg)
+    a.instagram, a.youtube
+      opacity: 1
+      transform: scale(1)
