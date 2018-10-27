@@ -3,8 +3,17 @@ email: zacharyrnewton@gmail.com
 description: "This is my description"
 baseurl: "/zn"
 url: "https://zacharyrnewton.github.io"
+
+#Variables
 instagram_link: https://www.instagram.com/zacharyrnewton/
 youtube_link:  https://www.youtube.com/zacharyrnewton
+skills:
+  - "UX Designer"
+  - "UI Designer"
+  - "Developer"
+  - "YouTuber"
+  #- "Editor"
+
 
 # Build settings
 markdown: kramdown

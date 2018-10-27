@@ -2,34 +2,17 @@
 layout: default
 ---
 <div class="hero">
-
   <div class="heroText">
     <h1>Hey there.</h1>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <div id="typed-strings">
-      <p>UX Designer</p>
-      <p>UI Designer</p>
-      <p>Developer</p>
-      <p>YouTuber</p>
-      <p>Cinematographer</p>
-      <p>Photographer</p>
-      <p>Editor</p>
-      <p>Podcaster</p>
-      <p>Podcast</p>
-      <p>Podcaster, Kinda</p>
+      {% for item in site.skills %}
+      <p>{{ item }}</p>
+      {% endfor %}
     </div>
     <h2>I’m <b class="highlight">Zachary</b>. I am a <br><span class="typed" id="typed"></span></h2>
-    <script>
-      var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        typeSpeed: 100,
-        backSpeed: 20,
-        backDelay: 1000,
-        loop: true,
-      })
-    </script>
+    
   </div>
-
   <div class="heroVideo">
     <img src="{{ site.baseurl }}/assets/img/hero.jpg" alt="Video Thumbnail">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 149 149" class="play">
@@ -55,7 +38,6 @@ layout: default
       </g>
     </svg>
   </div>
-
   <div class="timelineSection">
     <h5>Here are some products/projects I’ve worked on:</h5>
       <div class="timelineWrapper">
@@ -70,7 +52,4 @@ layout: default
         {% endfor %}
       </div>
   </div>
-
-
-
 </div>
