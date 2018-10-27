@@ -11,8 +11,6 @@
   align-items: center
   height: 172px
   width: 60px
-  .closeCTA
-    display: none
   a
     text-decoration: none
     font-size: 0
@@ -59,7 +57,7 @@
       opacity: 0
       z-index: 101
       transform: rotate(180deg)
-  &:hover
+  //&:hover
     .mainCTA
       a.chat
         opacity: 0
@@ -72,30 +70,32 @@
     a.instagram, a.youtube
       opacity: 1
       transform: scale(1)
-  &.CTAopen
-    .closeCTA
-      display: block
-      position: absolute
-      z-index: 100
-      width: 100vw
-      height: 100vh
-      right: -32px
-      bottom: -32px
-      @media screen and(max-width: 600px)
-        bottom: -16px
-        right: -16px
-    .mainCTA
-      a.chat
-        opacity: 0
-        z-index: 101
-        transform: rotate(180deg)
-      a.email
-        opacity: 1
-        z-index: 102
-        transform: rotate(360deg)
-    a.instagram, a.youtube
+.closeCTA
+  display: none
+html.CTAopen
+  .closeCTA
+    display: block
+    position: absolute
+    z-index: 10
+    right: 0
+    bottom: 0
+    left: 0
+    top: 0
+    @media screen and(max-width: 600px)
+      bottom: -16px
+      right: -16px
+  .mainCTA
+    a.chat
+      opacity: 0
+      z-index: 101
+      transform: rotate(180deg)
+    a.email
       opacity: 1
-      transform: scale(1)
+      z-index: 102
+      transform: rotate(360deg)
+  a.instagram, a.youtube
+    opacity: 1
+    transform: scale(1)
 @media screen and(max-width: 600px)
   .mainCTAWrapper
     bottom: 16px

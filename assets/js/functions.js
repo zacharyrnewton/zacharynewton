@@ -1,3 +1,3 @@
 $('.mainCTAWrapper, .closeCTA').on('click', function(){
-  $('.mainCTAWrapper').toggleClass('CTAopen');
+  $('html').toggleClass('CTAopen');
 });
