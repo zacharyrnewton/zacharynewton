@@ -11,6 +11,8 @@
   align-items: center
   height: 172px
   width: 60px
+  .closeCTA
+    display: none
   a
     text-decoration: none
     font-size: 0
@@ -71,13 +73,17 @@
       opacity: 1
       transform: scale(1)
   &.CTAopen
-    &::before
-      content: ""
+    .closeCTA
+      display: block
       position: absolute
+      z-index: 100
       width: 100vw
       height: 100vh
       right: -32px
       bottom: -32px
+      @media screen and(max-width: 600px)
+        bottom: -16px
+        right: -16px
     .mainCTA
       a.chat
         opacity: 0
@@ -90,3 +96,7 @@
     a.instagram, a.youtube
       opacity: 1
       transform: scale(1)
+@media screen and(max-width: 600px)
+  .mainCTAWrapper
+    bottom: 16px
+    right: 16px
