@@ -9,5 +9,18 @@
     {% include CTA.html %}
     {% include footer.html %}
     {% include js.html %}
+    {% if page.url == "/404.html" %}
+    <script type="text/javascript">
+      var referrer = document.referrer.indexOf(location.protocol + "//" + location.host) === 0;
+      if (referrer === true) {
+        $('#goHome').addClass('buttonPrimary');
+        $('.buttonWrapper').append('<a href="" class="buttonSecondary" id="goBack">go back</a>');
+        $('#goBack').click(function() {
+          event.preventDefault();
+          window.history.back();
+        });
+      }
+    </script>
+    {% endif %}
   </body>
 </html>

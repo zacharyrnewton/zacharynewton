@@ -11,7 +11,15 @@ layout: default
       {% endfor %}
     </div>
     <h2>I’m <b class="highlight">Zachary</b>. I am a <br><span class="typed" id="typed"></span></h2>
-    
+    <script type="text/javascript">
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 100,
+        backSpeed: 20,
+        backDelay: 1000,
+        loop: true,
+      });
+    </script>
   </div>
   <div class="heroVideo">
     <img src="{{ site.baseurl }}/assets/img/hero.jpg" alt="Video Thumbnail">
@@ -43,7 +51,7 @@ layout: default
       <div class="timelineWrapper">
         {% for project in site.projects reversed %}{% if project.link %}
         <a href="{{ project.link }}" target="_blank" class="timelineContainer">{% else %}
-        <a class="timelineContainer">{% endif %}
+        <a class="timelineContainer" href="404">{% endif %}
           <div class="timelineDotWrapper"><div class="timelineDot"></div></div>
           <h4>{{ project.title }}</h4>
           <small>{{ project.released }}</small>
