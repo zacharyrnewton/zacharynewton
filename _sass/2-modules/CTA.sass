@@ -11,6 +11,7 @@
   align-items: center
   height: 172px
   width: 60px
+  border-radius: 30px
   a
     position: relative
     text-decoration: none
@@ -49,6 +50,7 @@
       right: 0
       left: 0
       background: none
+      border-radius: 100%
       svg
         width: 18px
     a.chat
@@ -68,22 +70,23 @@
         opacity: 1
         z-index: 102
         transform: rotate(360deg)
-        &:hover
-          &::before
-            content: "Email"
-            position: absolute
-            font-size: 0.75rem
-            color: var(--cool-black)
-            font-weight: normal
-            top: auto
-            bottom: auto
-            right: 0
-            left: auto
-            margin-right: calc(100% + 1rem)
-            background-color: var(--white)
-            padding: .25rem .5rem
-            border-radius: 6px
-            box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+      &:hover
+        &::before
+          content: "Email"
+          position: absolute
+          font-size: 0.75rem
+          color: var(--cool-black)
+          font-weight: normal
+          top: 50%
+          bottom: auto
+          right: 0
+          left: auto
+          margin-right: calc(100% + 1rem)
+          background-color: var(--white)
+          padding: .25rem .5rem
+          border-radius: 6px
+          box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+          transform: translateY(-50%)
     a.instagram, a.youtube
       opacity: 1
       transform: scale(1)
@@ -144,21 +147,22 @@ html.CTAopen
       opacity: 1
       z-index: 102
       transform: rotate(360deg)
-      &::before
-        content: "Email"
-        position: absolute
-        font-size: 0.75rem
-        color: var(--cool-black)
-        font-weight: normal
-        top: auto
-        bottom: auto
-        right: 0
-        left: auto
-        margin-right: calc(100% + 1rem)
-        background-color: var(--white)
-        padding: .25rem .5rem
-        border-radius: 6px
-        box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+    &::before
+      content: "Email"
+      position: absolute
+      font-size: 0.75rem
+      color: var(--cool-black)
+      font-weight: normal
+      top: 50%
+      bottom: auto
+      right: 0
+      left: auto
+      margin-right: calc(100% + 1rem)
+      background-color: var(--white)
+      padding: .25rem .5rem
+      border-radius: 6px
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+      transform: translateY(-50%)
   a.instagram, a.youtube
     opacity: 1
     transform: scale(1)
