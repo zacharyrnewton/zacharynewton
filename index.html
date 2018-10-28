@@ -51,7 +51,7 @@ layout: default
       <div class="timelineWrapper">
         {% for project in site.projects reversed %}{% if project.link %}
         <a href="{{ project.link }}" target="_blank" class="timelineContainer">{% else %}
-        <a class="timelineContainer" href="404">{% endif %}
+        <a class="timelineContainer">{% endif %}
           <div class="timelineDotWrapper"><div class="timelineDot"></div></div>
           <h4>{{ project.title }}</h4>
           <small>{{ project.released }}</small>
