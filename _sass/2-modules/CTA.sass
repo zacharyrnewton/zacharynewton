@@ -12,6 +12,7 @@
   height: 172px
   width: 60px
   a
+    position: relative
     text-decoration: none
     font-size: 0
     display: flex
@@ -67,9 +68,59 @@
         opacity: 1
         z-index: 102
         transform: rotate(360deg)
+        &:hover
+          &::before
+            content: "Email"
+            position: absolute
+            font-size: 0.75rem
+            color: var(--cool-black)
+            font-weight: normal
+            top: auto
+            bottom: auto
+            right: 0
+            left: auto
+            margin-right: calc(100% + 1rem)
+            background-color: var(--white)
+            padding: .25rem .5rem
+            border-radius: 6px
+            box-shadow: 0 6px 16px rgba(0,0,0,0.16)
     a.instagram, a.youtube
       opacity: 1
       transform: scale(1)
+    a.instagram
+      &:hover
+        &::before
+          content: "Instagram"
+          position: absolute
+          font-size: 0.75rem
+          color: var(--cool-black)
+          font-weight: normal
+          top: auto
+          bottom: auto
+          right: 0
+          left: auto
+          margin-right: calc(100% + 1rem)
+          background-color: var(--white)
+          padding: .25rem .5rem
+          border-radius: 6px
+          box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+    a.youtube
+      &:hover
+        &::before
+          content: "YouTube"
+          position: absolute
+          font-size: 0.75rem
+          color: var(--cool-black)
+          font-weight: normal
+          top: auto
+          bottom: auto
+          right: 0
+          left: auto
+          margin-right: calc(100% + 1rem)
+          background-color: var(--white)
+          padding: .25rem .5rem
+          border-radius: 6px
+          box-shadow: 0 6px 16px rgba(0,0,0,0.16)
 .closeCTA
   display: none
 html.CTAopen
@@ -93,9 +144,56 @@ html.CTAopen
       opacity: 1
       z-index: 102
       transform: rotate(360deg)
+      &::before
+        content: "Email"
+        position: absolute
+        font-size: 0.75rem
+        color: var(--cool-black)
+        font-weight: normal
+        top: auto
+        bottom: auto
+        right: 0
+        left: auto
+        margin-right: calc(100% + 1rem)
+        background-color: var(--white)
+        padding: .25rem .5rem
+        border-radius: 6px
+        box-shadow: 0 6px 16px rgba(0,0,0,0.16)
   a.instagram, a.youtube
     opacity: 1
     transform: scale(1)
+  a.instagram
+    &::before
+      content: "Instagram"
+      position: absolute
+      font-size: 0.75rem
+      color: var(--cool-black)
+      font-weight: normal
+      top: auto
+      bottom: auto
+      right: 0
+      left: auto
+      margin-right: calc(100% + 1rem)
+      background-color: var(--white)
+      padding: .25rem .5rem
+      border-radius: 6px
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+  a.youtube
+    &::before
+      content: "YouTube"
+      position: absolute
+      font-size: 0.75rem
+      color: var(--cool-black)
+      font-weight: normal
+      top: auto
+      bottom: auto
+      right: 0
+      left: auto
+      margin-right: calc(100% + 1rem)
+      background-color: var(--white)
+      padding: .25rem .5rem
+      border-radius: 6px
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16)
 @media screen and(max-width: 600px)
   .mainCTAWrapper
     bottom: 16px
