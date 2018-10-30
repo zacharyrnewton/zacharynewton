@@ -1,3 +1,8 @@
+@keyframes CTAFadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
 .mainCTAWrapper
   position: fixed
   z-index: 100
@@ -36,6 +41,7 @@
     transition: all 0.1s ease-in-out 0.05s
   a.youtube
     transition: all 0.1s ease-in-out 0.1s
+
   .mainCTA
     position: relative
     border-radius: 100%
@@ -87,6 +93,11 @@
             border-radius: 6px
             box-shadow: 0 6px 16px rgba(0,0,0,0.16)
             transform: translateY(-50%)
+            opacity: 0
+            animation-name: CTAFadeIn
+            animation-duration: .2s
+            animation-delay: .1s
+            animation-fill-mode: forwards
     a.instagram, a.youtube
       opacity: 1
       transform: scale(1)
@@ -107,6 +118,11 @@
           padding: .25rem .5rem
           border-radius: 6px
           box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+          opacity: 0
+          animation-name: CTAFadeIn
+          animation-duration: .2s
+          animation-delay: .1s
+          animation-fill-mode: forwards
     a.youtube
       &:hover
         &::before
@@ -124,6 +140,11 @@
           padding: .25rem .5rem
           border-radius: 6px
           box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+          opacity: 0
+          animation-name: CTAFadeIn
+          animation-duration: .2s
+          animation-delay: .1s
+          animation-fill-mode: forwards
 .closeCTA
   display: none
 html.CTAopen
@@ -163,6 +184,11 @@ html.CTAopen
       border-radius: 6px
       box-shadow: 0 6px 16px rgba(0,0,0,0.16)
       transform: translateY(-50%)
+      opacity: 0
+      animation-name: CTAFadeIn
+      animation-duration: .2s
+      animation-delay: .1s
+      animation-fill-mode: forwards
   a.instagram, a.youtube
     opacity: 1
     transform: scale(1)
@@ -182,6 +208,11 @@ html.CTAopen
       padding: .25rem .5rem
       border-radius: 6px
       box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+      opacity: 0
+      animation-name: CTAFadeIn
+      animation-duration: .2s
+      animation-delay: .1s
+      animation-fill-mode: forwards
   a.youtube
     &::before
       content: "YouTube"
@@ -198,6 +229,11 @@ html.CTAopen
       padding: .25rem .5rem
       border-radius: 6px
       box-shadow: 0 6px 16px rgba(0,0,0,0.16)
+      opacity: 0
+      animation-name: CTAFadeIn
+      animation-duration: .2s
+      animation-delay: .1s
+      animation-fill-mode: forwards
 @media screen and(max-width: 600px)
   .mainCTAWrapper
     bottom: 16px
