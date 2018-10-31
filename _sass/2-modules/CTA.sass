@@ -17,6 +17,7 @@
   height: 172px
   width: 60px
   border-radius: 30px
+  -webkit-tap-highlight-color: transparent
   a
     position: relative
     text-decoration: none
@@ -98,6 +99,7 @@
             animation-duration: .2s
             animation-delay: .1s
             animation-fill-mode: forwards
+            animation-timing-function: ease-out
     a.instagram, a.youtube
       opacity: 1
       transform: scale(1)
@@ -123,6 +125,7 @@
           animation-duration: .2s
           animation-delay: .1s
           animation-fill-mode: forwards
+          animation-timing-function: ease-out
     a.youtube
       &:hover
         &::before
@@ -145,6 +148,7 @@
           animation-duration: .2s
           animation-delay: .1s
           animation-fill-mode: forwards
+          animation-timing-function: ease-out
 .closeCTA
   display: none
 html.CTAopen
@@ -189,6 +193,7 @@ html.CTAopen
       animation-duration: .2s
       animation-delay: .1s
       animation-fill-mode: forwards
+      animation-timing-function: ease-out
   a.instagram, a.youtube
     opacity: 1
     transform: scale(1)
@@ -211,8 +216,9 @@ html.CTAopen
       opacity: 0
       animation-name: CTAFadeIn
       animation-duration: .2s
-      animation-delay: .1s
+      animation-delay: .15s
       animation-fill-mode: forwards
+      animation-timing-function: ease-out
   a.youtube
     &::before
       content: "YouTube"
@@ -232,8 +238,9 @@ html.CTAopen
       opacity: 0
       animation-name: CTAFadeIn
       animation-duration: .2s
-      animation-delay: .1s
+      animation-delay: .2s
       animation-fill-mode: forwards
+      animation-timing-function: ease-out
 @media screen and(max-width: 600px)
   .mainCTAWrapper
     bottom: 16px
