@@ -2,6 +2,11 @@ title: Zachary Newton
 email: zacharyrnewton@gmail.com
 phone: "+1-754-368-1567"
 description: "This is my description"
+keywords:
+  - "UX Design"
+  - "UI Design"
+  - "Development"
+  - "Education"
 baseurl: "/zn"
 url: "https://zacharyrnewton.github.io"
 twitterHandle: "_zacharyrnewton"

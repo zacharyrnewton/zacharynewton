@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, viewport-fit=cover" />
 <title>{{ site.title }}</title>
 <meta name="description" content="{{ site.description }}" />
+<meta name="keywords" content="{% for item in site.keywords %}{{ item }}, {% endfor %}YouTuber" />
 <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/styles.css" />
 <!--Favicons-->
