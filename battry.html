@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Light Sensor?</title>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  window.addEventListener('devicelight', (e) => {
+  	console.log(e.value);
+  });
+
+  navigator.getBattery().then((battery) => {
+    console.log(battery.level * 100);
+    document.getElementById('batteryLevel').innerHTML = battery.level * 100;
+
+    battery.addEventListener('levelchange', () => {
+      console.log(this.level * 100);
+      document.getElementById('batteryLevel').innerHTML = battery.level * 100;
+    });
+  });
+</script>
+</head>
+<body>
+  <h1>Your battery level is: <span id="batteryLevel">I don't fucking know</span></h1>
+</body>
+</html>
