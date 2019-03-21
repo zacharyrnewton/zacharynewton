@@ -1,7 +1,6 @@
 ---
 label: Projects
 hide_body: true
-is_partial: false
 fields:
 - type: text
   name: title
@@ -35,7 +34,7 @@ fields:
   label: Link
   description: If you have an external link to your project/product, place it here.
 pages:
+- _projects/idea-agency.html
+- _projects/david-gurr.html
 - _projects/zachary-newton-2.0.html
 - _projects/design-forum.html
-- _projects/david-gurr.html
-- _projects/idea-agency.html
