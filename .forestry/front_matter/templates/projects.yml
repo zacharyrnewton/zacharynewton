@@ -34,6 +34,7 @@ fields:
   label: Link
   description: If you have an external link to your project/product, place it here.
 pages:
+- _projects/url-dencoder.html
 - _projects/zachary-newton-1-0.html
 - _projects/idea-agency.html
 - _projects/david-gurr.html
