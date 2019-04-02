@@ -4,13 +4,14 @@
   padding: 48px 16px 16px 16px
   box-sizing: border-box
   display: grid
-  grid-template: "heroText" "timelineSection"
+  grid-template: "heroText" "heroVideo" "timelineSection"
   background:
     image: url('../img/shape.svg')
     size: cover
     position: -200px -100px
     repeat: no-repeat
     background-attachment: fixed
+  user-select: none
 .heroText
   grid-area: heroText
   span.typed
@@ -19,6 +20,11 @@
   grid-area: timelineSection
   box-sizing: border-box
   margin-bottom: 4rem
+  user-select: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
   h5
     margin: 0 0 2rem 0
   .timelineWrapper
@@ -34,13 +40,14 @@
       max-width: 769px
       padding: 2rem
       background: var(--white)
-      box-shadow: 0 6px 16px rgba(54,54,82,0.16)
+      box-shadow: 0 2px 3px rgba(0,0,0,0.16)
       border-radius: 6px
       cursor: pointer
       transition: all 0.2s ease-out
       text-decoration: none
       color: var(--cool-black)
       box-sizing: border-box
+
       h4
         margin: 0
         padding: 0 0 2px 0
@@ -110,7 +117,9 @@
       &:visited
         background: var(--white)
       &:hover
-        box-shadow: 0 10px 20px rgba(54,54,82,0.16)
+        box-shadow: 0 10px 15px rgba(54,54,82,0.16)
+        .timelineDot
+          background: var(--primary)
         .timelineDot::after
           content: ""
           position: absolute
@@ -120,8 +129,10 @@
           left: -5px
           z-index: 1
           border-radius: 100%
-          opacity: .05
+          opacity: .5
           background: var(--primary)
+      &:active
+        background: var(--cool-white)
 .heroVideo
   position: relative
   grid-area: heroVideo
@@ -173,7 +184,7 @@
     padding: 0
     display: grid
     overflow: scroll
-    grid-template: "heroText" "timelineSection"
+    grid-template: "heroText" "heroVideo" "timelineSection"
   .heroVideo
     width: 50vw
     height: 100vh
