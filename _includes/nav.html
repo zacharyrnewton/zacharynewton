@@ -1,2 +1,15 @@
 <nav>
+  <div class="navigation-toggle">
+    <span class="bar-one"></span>
+    <span class="bar-two"></span>
+    <span class="bar-three"></span>
+  </div>
+  <div class="nav-items">
+    <ul>
+      {% for items in site.data.nav %}
+      <li><a href="{{ site.url }}{{ site.baseurl }}{{ items.url }}"{% if items.url == page.url %}class="active-link"{% endif %}>{{ items.name }}</a></li>
+      {% endfor %}
+      <li><a class="contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>

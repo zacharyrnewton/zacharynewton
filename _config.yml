@@ -25,6 +25,7 @@ skills:
 
 
 # Build settings
+permalink: pretty
 markdown: kramdown
 sass:
   sass_dir: _sass
