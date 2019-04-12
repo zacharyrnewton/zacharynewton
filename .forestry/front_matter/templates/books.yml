@@ -1,0 +1,33 @@
+---
+label: Books
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  description: What was the name of the book?
+  config:
+    required: true
+- type: text
+  label: Author
+  name: author
+  description: Who wrote the book?
+  config:
+    required: true
+- type: datetime
+  config:
+    required: true
+    date_format: YYYY
+  label: Date
+  name: date
+  description: When did you read this book?
+- type: text
+  name: link
+  label: Link
+  description: What is the link to view this book?
+  config:
+    required: true
+- type: file
+  name: cover
+  label: Cover
+  description: What image would you like to use as the cover photo?

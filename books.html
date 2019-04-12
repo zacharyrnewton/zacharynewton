@@ -9,13 +9,18 @@ layout: default
   </div>
 </header>
 <section>
-  <div class="books-year"><h3 class="section">2019</h3></div>
+  {% assign booksByYear = site.books | group_by_exp:"book", "book.date | date:'%Y'" | reverse %}
+  {% for year in booksByYear %}
+  <div class="books-year"><h3 class="section">{{ year.name }}</h3></div>
   <div class="books-grid">
+    {% for book in year.items %}
     <a class="book" href="" target="_blank">
-      <img src="https://cdn.psychologytoday.com/sites/default/files/styles/image-article_inline_full/public/blogs/103195/2014/04/148114-150804.jpg?itok=a9Z6f_ma" />
-      <h4>Title of the book</h4>
-      <p>WriterName</p>
-      <h6 href="" target="_blank">View →</h6>
+      <img src="https://i.kinja-img.com/gawker-media/image/upload/s--PnSCSSFQ--/c_scale,f_auto,fl_progressive,pg_1,q_80,w_800/z7jcryloxjedsztssw39.jpg" />
+      <h4>{{ book.title }}</h4>
+      <p>{{ book.author }}</p>
+      <h6>View →</h6>
     </a>
+    {% endfor %}
   </div>
+  {% endfor %}
 </section>
