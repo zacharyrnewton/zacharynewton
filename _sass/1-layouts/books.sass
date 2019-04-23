@@ -1,3 +1,6 @@
+.books-container
+  padding: 0 16px 64px 16px
+  box-sizing: border-box
 .books-year
   background: var(--white)
   width: 100%
@@ -5,13 +8,13 @@
   padding: 0 16px
   user-select: none
   position: sticky
-  top: 0
+  top: 80px
   box-sizing: border-box
   z-index: 2
+  text-align: left
 .books-grid
   max-width: 976px
-  margin: auto
-  //padding: 0 16px
+  margin: 0 auto 32px auto
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(232px, 1fr))
   grid-gap: 16px
@@ -22,7 +25,6 @@
     background: var(--white)
     border-radius: 6px
     box-sizing: border-box
-    //max-width: 232px
     text-decoration: none
     transition: all 0.2s ease-in-out
     position: relative
@@ -44,3 +46,7 @@
       color: var(--primary)
     &:hover
       background: var(--cool-white)
+
+@media screen and(max-width: 1125px)
+  .books-year
+    text-align: center

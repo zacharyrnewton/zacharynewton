@@ -13,6 +13,8 @@ nav
   justify-content: center
   z-index: 100
   user-select: none
+  background: white
+  transition: background 0.2s ease-in-out, box-shadow 0.3s ease-in-out 0.1s
   .navigation-toggle
     height: 16px
     width: 25px
@@ -106,3 +108,8 @@ body.navigation-active
       transform: none
       opacity: 1
       transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out, padding 0.3s ease-in-out
+
+
+nav.scrolled
+  background: white
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16)

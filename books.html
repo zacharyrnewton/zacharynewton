@@ -8,7 +8,7 @@ layout: default
     <hr>
   </div>
 </header>
-<section>
+<section class="books-container">
   {% assign booksByYear = site.books | group_by_exp:"book", "book.date | date:'%Y'" | reverse %}
   {% for year in booksByYear %}
   <div class="books-year"><h3 class="section">{{ year.name }}</h3></div>
