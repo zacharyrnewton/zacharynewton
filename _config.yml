@@ -25,6 +25,7 @@ skills:
 
 
 # Build settings
+permalink: pretty
 markdown: kramdown
 sass:
   sass_dir: _sass
@@ -34,3 +35,5 @@ plugins:
 collections:
   projects:
     output: true
+  books:
+    output: false

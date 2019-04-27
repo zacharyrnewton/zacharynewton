@@ -1,7 +1,121 @@
 nav
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   right: 0
   bottom: auto
-  height: 48px
+  height: 80px
+  padding: 32px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  z-index: 100
+  user-select: none
+  background: white
+  transition: background 0.2s ease-in-out, box-shadow 0.3s ease-in-out 0.1s
+  .navigation-toggle
+    height: 16px
+    width: 25px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    z-index: 102
+    padding: 0 3.5px
+    cursor: pointer
+    transition: all 0.1s ease-in-out
+    &:hover
+      opacity: 0.6
+    span.bar-one, span.bar-two, span.bar-three
+      height: 2px
+      border-radius: 2px
+      background: var(--black)
+      transition: inherit
+    span.bar-one
+      width: 25px
+    span.bar-two
+      width: 12px
+    span.bar-three
+      width: 19px
+  .nav-items
+    position: fixed
+    z-index: 101
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: var(--white)
+    padding: 0
+    margin: 0
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 128px 32px 0 32px
+    transform: translateY(-100%)
+    opacity: 0
+    transition: bottom 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s, padding 0.3s ease-in-out
+    ul
+      margin: 0
+      padding: 0
+      text-align: left
+      li
+        list-style: none
+        text-align: inherit
+        a
+          font-size: 3rem
+          font-weight: $font-bold
+          color: var(--cool-black)
+          text-decoration: none
+          line-height: 1.5em
+          text-align: inherit
+          opacity: 1
+          &:hover
+            color: var(--primary)
+            opacity: 1
+        a.active-link
+          opacity: 0.6
+          &:hover
+            opacity: 1
+@media screen and (max-width: 700px)
+  nav
+    padding: 16px
+    .nav-items
+      padding: 64px 16px 0 16px
+      ul
+        li
+          a
+            font-size: 2.5rem
+
+body.navigation-active
+  nav
+    .navigation-toggle
+      align-items: center
+      justify-content: center
+      span.bar-one
+        width: 25px
+        transform: rotate(-45deg) translateX(-2.8125px)
+      span.bar-two
+        width: 12px
+        opacity: 0
+      span.bar-three
+        width: 25px
+        transform: rotate(45deg) translateX(-2.8125px)
+    .nav-items
+      bottom: 0
+      transform: none
+      opacity: 1
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out, padding 0.3s ease-in-out
+
+
+nav.scrolled
+  background: white
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16)
+
+nav.home-page-nav
+  background-color: transparent
+nav.home-page-nav.scrolled
+  background: white
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.16)

@@ -1,0 +1,52 @@
+.books-container
+  padding: 0 16px 64px 16px
+  box-sizing: border-box
+.books-year
+  background: var(--white)
+  width: 100%
+  margin: 8px auto
+  padding: 0 16px
+  user-select: none
+  position: sticky
+  top: 80px
+  box-sizing: border-box
+  z-index: 2
+  text-align: left
+.books-grid
+  max-width: 976px
+  margin: 0 auto 32px auto
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  grid-gap: 16px
+  box-sizing: content-box
+  user-select: none
+  .book
+    padding: 16px
+    background: var(--white)
+    border-radius: 6px
+    box-sizing: border-box
+    text-decoration: none
+    transition: all 0.2s ease-in-out
+    position: relative
+    z-index: 1
+    img
+      display: block
+      width: 100%
+      height: 266px
+      object-fit: cover
+      border-radius: 6px
+    h4
+      margin: 8px 0 5px 0
+    p
+      margin: 0
+      opacity: .87
+    h6
+      text-align: right
+      margin: 16px 0 0 0
+      color: var(--primary)
+    &:hover
+      background: var(--cool-white)
+
+@media screen and(max-width: 1125px)
+  .books-year
+    text-align: center

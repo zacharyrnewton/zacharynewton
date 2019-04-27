@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<header>
+  <div class="section">
+    <h1>Books</h1>
+    <h5>Here are some books I have read over the past few years</h5>
+    <hr>
+  </div>
+</header>
+<section class="books-container">
+  {% assign booksByYear = site.books | group_by_exp:"book", "book.date | date:'%Y'" | reverse %}
+  {% for year in booksByYear %}
+  <div class="books-year"><h3 class="section">{{ year.name }}</h3></div>
+  <div class="books-grid">
+    {% for book in year.items %}
+    <a class="book" href="" target="_blank">
+      <img src="https://i.kinja-img.com/gawker-media/image/upload/s--PnSCSSFQ--/c_scale,f_auto,fl_progressive,pg_1,q_80,w_800/z7jcryloxjedsztssw39.jpg" />
+      <h4>{{ book.title }}</h4>
+      <p>{{ book.author }}</p>
+      <h6>View →</h6>
+    </a>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</section>
