@@ -5,10 +5,19 @@ admin_path: "/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: _books
+  label: Books
+  create: all
+  match: "**/*"
+  templates:
+  - books
+- type: directory
   path: _projects
   label: Projects
   create: all
   match: "**/*"
+  templates:
+  - projects
 upload_dir: assets/img
 public_path: "/media"
 front_matter_path: ''
