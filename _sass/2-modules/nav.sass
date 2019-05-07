@@ -16,6 +16,7 @@ nav
   background: white
   transition: background 0.2s ease-in-out, box-shadow 0.3s ease-in-out 0.1s
   .navigation-toggle
+    position: relative
     height: 16px
     width: 25px
     display: flex
@@ -25,20 +26,42 @@ nav
     z-index: 102
     padding: 0 3.5px
     cursor: pointer
-    transition: all 0.1s ease-in-out
+    transition: opacity 0.1s ease-in-out, width 0.1s ease-in-out, color 0.1s ease-in-out
+    &::before
+      content: ""
+      background: $primary
+      opacity: 0
+      height: 32px
+      width: 32px
+      padding: 8px
+      position: absolute
+      top: 50%
+      right: auto
+      bottom: auto
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 101
+      border-radius: 100%
+      transition: all 0.1s ease-in-out
     &:hover
       opacity: 0.6
+      &::before
+        opacity: .1
+      span.bar-one, span.bar-two, span.bar-three
+        width: 25px
     span.bar-one, span.bar-two, span.bar-three
       height: 2px
       border-radius: 2px
       background: var(--black)
       transition: inherit
+      transform-origin: center
     span.bar-one
       width: 25px
     span.bar-two
       width: 12px
     span.bar-three
       width: 19px
+
   .nav-items
     position: fixed
     z-index: 101
@@ -96,13 +119,22 @@ body.navigation-active
       justify-content: center
       span.bar-one
         width: 25px
-        transform: rotate(-45deg) translateX(-2.8125px)
+        //transform: rotate(-45deg) translateX(-2.8125px)
+        transform: translate(-50%, -50%) rotate(45deg)
+        position: absolute
+        top: 50%
+        left: 50%
       span.bar-two
         width: 12px
         opacity: 0
+        display: none
       span.bar-three
         width: 25px
-        transform: rotate(45deg) translateX(-2.8125px)
+        //transform: rotate(45deg) translateX(-2.8125px)
+        transform: translate(-50%, -50%) rotate(-45deg)
+        position: absolute
+        top: 50%
+        left: 50%
     .nav-items
       bottom: 0
       transform: none
