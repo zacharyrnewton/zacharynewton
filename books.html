@@ -14,8 +14,8 @@ layout: default
   <div class="books-year"><h3 class="section">{{ year.name }}</h3></div>
   <div class="books-grid">
     {% for book in year.items %}
-    <a class="book" href="" target="_blank">
-      <img src="https://i.kinja-img.com/gawker-media/image/upload/s--PnSCSSFQ--/c_scale,f_auto,fl_progressive,pg_1,q_80,w_800/z7jcryloxjedsztssw39.jpg" />
+    <a class="book" href="{{ book.link }}" target="_blank">
+      <img {% if book.cover == empty %}class="empty"{% endif %}src="{% if book.cover != empty %}{{ book.cover }}{% else %}https://source.unsplash.com/random/400x650{% endif %}" />
       <h4>{{ book.title }}</h4>
       <p>{{ book.author }}</p>
       <h6>View →</h6>
