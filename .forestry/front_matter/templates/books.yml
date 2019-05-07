@@ -31,3 +31,5 @@ fields:
   name: cover
   label: Cover
   description: What image would you like to use as the cover photo?
+pages:
+- _books/the-millionaire-next-door.html
