@@ -32,5 +32,5 @@ fields:
   label: Cover
   description: What image would you like to use as the cover photo?
 pages:
-- _books/never-split-the-difference.html
 - _books/the-millionaire-next-door.html
+- _books/never-split-the-difference.html
