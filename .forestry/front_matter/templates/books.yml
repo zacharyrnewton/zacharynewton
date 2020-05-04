@@ -33,4 +33,5 @@ fields:
   description: What image would you like to use as the cover photo?
 pages:
 - _books/never-split-the-difference.html
+- _books/sprint-how-to-solve-big-problems-and-test-new-ideas-in-just-five-days.html
 - _books/the-millionaire-next-door.html
