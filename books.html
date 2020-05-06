@@ -15,9 +15,11 @@ layout: default
   <div class="books-grid">
     {% for book in year.items %}
     <a class="book" href="{{ book.link }}" target="_blank">
-      <img {% if book.cover == empty %}class="empty"{% endif %}src="{% if book.cover != empty %}{{ book.cover }}{% else %}https://source.unsplash.com/random/400x650{% endif %}" />
-      <h4>{{ book.title }}</h4>
-      <p>{{ book.author }}</p>
+      <div>
+        <img {% if book.cover == empty %}class="empty"{% endif %}src="{% if book.cover != empty %}{{ book.cover }}{% else %}https://source.unsplash.com/random/400x650{% endif %}" />
+        <h4>{{ book.title }}</h4>
+        <p>{{ book.author }}</p>
+      </div>
       <h6>View →</h6>
     </a>
     {% endfor %}
